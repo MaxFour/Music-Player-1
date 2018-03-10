@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="grid_item_horizontal_width">148dp</dimen>
+
+    <dimen name="equalizer_activity_top_padding">64dp</dimen>
+    <dimen name="equalizer_activity_edge_padding">64dp</dimen>
+
+    <dimen name="header_view_height">420dp</dimen>
+
+</resources>

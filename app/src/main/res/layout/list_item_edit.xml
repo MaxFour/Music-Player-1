@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.internal.ForegroundLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:descendantFocusability="blocksDescendants"
+    android:foreground="?attr/list_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.android.music.ui.views.DragHandle
+        android:id="@+id/drag_handle"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:importantForAccessibility="no"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:src="@drawable/ic_drag_grip"/>
+
+    <com.android.music.ui.views.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        tools:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/line_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp"
+            tools:text="Feeling Kinda Anxious"/>
+
+        <TextView
+            android:id="@+id/line_two"
+            style="?attr/secondaryTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp"
+            tools:text="Franz Ferdinand - Tonight"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line_three"
+        style="?attr/secondaryTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:minEms="3"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp"
+        tools:text="3:20"/>
+
+    <include layout="@layout/overflow_button"/>
+
+</android.support.design.internal.ForegroundLinearLayout>

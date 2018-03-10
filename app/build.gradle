@@ -1,0 +1,311 @@
+import org.jetbrains.annotations.Nullable
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url "https://maven.google.com" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath gradlePlugins.android
+        classpath gradlePlugins.dexcount
+        classpath gradlePlugins.fabric
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+apply plugin: 'io.fabric'
+apply plugin: 'com.github.triplet.play'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+    maven {
+        url 'http://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+@Nullable
+def getProperties(String fileName) {
+    final Properties properties = new Properties()
+    def file = file(fileName)
+    if (file.exists()) {
+        file.withInputStream { stream -> properties.load(stream) }
+    }
+    return properties
+}
+
+static def getProperty(@Nullable Properties properties, String name) {
+    return properties.getProperty(name) ?: "$name missing"
+}
+
+android {
+    dexOptions {
+        jumboMode = true
+    }
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+
+        versionName versions.name
+        versionCode 5000
+
+        resConfigs "en", "ru"
+
+        renderscriptTargetApi 23
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "boolean", "MULTIDEX_ENABLED", "false"
+
+        // This API key is provided for convenience. Please go to https://www.last.fm/api/account/create and create your own.
+        buildConfigField("String", "LASTFM_API_KEY", "\"${getProperty(getProperties('../public.properties'), 'LASTFM_API_KEY')}\"")
+
+        manifestPlaceholders = [CRASHLYTICS_API_KEY: "dummy-key"]
+    }
+
+    signingConfigs {
+        release {
+            Properties properties = getProperties('../keystore.properties')
+            storeFile file('C:/Users/Max/max-key.jks')
+            keyAlias 'max-key'
+            storePassword 'mmm789'
+            keyPassword 'mmm789'
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            applicationIdSuffix ".debug"
+            ext.enableCrashlytics = false
+        }
+
+        release {
+
+            minifyEnabled true
+            shrinkResources true
+
+            // For further optimisation, use 'proguard-android-optimize.txt' instead of 'proguard-android.txt'.
+            // Last time I checked, it reduced by another ~5000 methods.
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), file('proguard-rules.pro')
+            signingConfig signingConfigs.release
+
+            buildConfigField("String", "LASTFM_API_KEY", "\"${getProperty(getProperties('../private.properties'), 'LASTFM_API_KEY')}\"")
+        }
+    }
+
+    // Ignore useless variants, such as devRelease.
+    variantFilter { variant ->
+
+        def names = variant.flavors*.name
+        def buildTypes = variant.buildType*.name
+
+        def debugFilters = ["paid", "free"]
+        def relFilters = ["dev", "devPre21"]
+
+        def filter = { name -> names.contains(name) }
+        def debugIgnore = buildTypes.contains("debug") && debugFilters.stream().anyMatch(filter)
+        def releaseIgnore = buildTypes.contains("release") && relFilters.stream().anyMatch(filter)
+
+        setIgnore(debugIgnore || releaseIgnore)
+    }
+
+    // Set the version code for release builds
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+        }
+    }
+
+    // Used to enable Java8 features
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "all"
+
+    productFlavors {
+
+        dev {
+            dimension "all"
+
+            applicationId "com.android.music"
+
+            //Enable multiDex for debug builds, since they don't use proguard
+            multiDexEnabled true
+
+            resConfigs "en", "xxhdpi"
+        }
+
+        paid {
+            dimension "all"
+            applicationId "com.android.music"
+        }
+
+        free {
+            dimension "all"
+            applicationId "com.android.mplayer"
+        }
+    }
+
+    sourceSets {
+        main.aidl.srcDirs = ['src/main/java']
+
+        dev.res.srcDirs = ['src/paid/res']
+        dev.java.srcDirs = ['src/paid/java']
+
+        devPre21.res.srcDirs = ['src/paid/res']
+        devPre21.java.srcDirs = ['src/paid/java']
+
+        paid.res.srcDirs = ['src/paid/res']
+        paid.java.srcDirs = ['src/paid/java']
+
+        free.manifest.srcFile 'src/free/AndroidManifest.xml'
+        free.res.srcDirs = ['src/free/res']
+        free.java.srcDirs = ['src/free/java']
+    }
+
+    lintOptions {
+        ignore 'ExtraTranslation', 'MissingTranslation'
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    // //////////////////////////////////////////////////////////////////////////
+    // Google libs
+    // /////////////////////////////////////////////////////////////////////////
+    implementation libs.cardView
+    implementation libs.design
+    implementation libs.palette
+    implementation libs.prefCompat
+    implementation libs.prefCompatv14
+    implementation libs.recyclerView
+    implementation libs.supportv4
+    implementation libs.firebaseCore
+    implementation libs.firebaseRemoteConfig
+    implementation libs.constraintLayout
+    implementation libs.chromecast
+    // //////////////////////////////////////////////////////////////////////////
+    // Square libs
+    // /////////////////////////////////////////////////////////////////////////
+    implementation libs.okio
+    implementation libs.okhttp
+    implementation libs.retrofit
+    implementation libs.retrofitGson
+    implementation libs.sqlBrite
+    debugImplementation libs.haha
+    debugImplementation libs.leakCanaryDebug
+    releaseImplementation libs.leakCanaryRel
+    // //////////////////////////////////////////////////////////////////////////
+    // External libs
+    // /////////////////////////////////////////////////////////////////////////
+    implementation libs.navigation
+    implementation libs.recyclerAdapter
+    implementation libs.multiSheetView
+    implementation libs.ccl
+    implementation libs.nanoHttp
+    implementation libs.dashClockApi
+    implementation libs.fastScroll
+    implementation libs.glide
+    implementation libs.glideOkhttp
+    implementation libs.glidePalette
+    implementation libs.permiso
+    implementation libs.rxAndroid
+    implementation libs.rxBinding
+    implementation libs.rxBindingAppCompat
+    implementation libs.rxImagePicker
+    implementation libs.rxJava
+    implementation libs.rxRelay
+    implementation libs.rxBroadcast
+    implementation libs.rxPrefs
+    implementation 'com.tspoon.traceur:traceur:1.0.1'
+    implementation libs.streams
+    implementation(libs.crashlytics) {
+        transitive = true
+    }
+    implementation libs.materialDialogs
+    implementation libs.materialDialogCommons
+    implementation libs.butterknife
+    annotationProcessor libs.butterknifeAnnotationProcessor
+    implementation libs.dagger
+    annotationProcessor libs.daggerAnnotationProcessor
+    implementation libs.expandableRecyclerView
+    implementation libs.aesthetic
+    implementation libs.billing
+    // //////////////////////////////////////////////////////////////////////////
+    // Multidex (Only used in non-proguard pre-21 builds)
+    // /////////////////////////////////////////////////////////////////////////
+    implementation libs.multiDex
+    // //////////////////////////////////////////////////////////////////////////
+    // Testing
+    // /////////////////////////////////////////////////////////////////////////
+    testImplementation libs.junit
+    testImplementation libs.mockito
+    testImplementation libs.powermock
+    testImplementation libs.powermockjunit
+    testImplementation libs.robolectric
+    testImplementation libs.assertj
+    androidTestCompile(libs.espresso) {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        eachDependency { details ->
+            // Force all of the primary support libraries to use the same version.
+            if (details.requested.group == 'com.android.support'
+                    && details.requested.name != 'multidex'
+                    && details.requested.name != 'multidex-instrumentation') {
+                details.useVersion versions.supportLib
+            }
+        }
+    }
+}
+
+class Globals {
+    static int versionCode = -1
+}
+
+static String getPlayStoreTrack() {
+    def track = 'production'
+    if (System.getenv("TAG")) {
+        String branch = System.getenv("TAG").toString()
+        if (branch.contains('alpha')) {
+            track = 'alpha'
+        } else if (branch.contains('beta')) {
+            track = 'beta'
+        } else if (branch.contains('release')) {
+            track = 'production'
+        } else if (branch.contains('rollout')) {
+            track = 'rollout'
+        }
+    }
+    println "Play store track: $track"
+    return track
+}
+
+play {
+    track = getPlayStoreTrack()
+    userFraction = 0.1
+    untrackOld = true
+    serviceAccountEmail = 'app-deployment@api-5801704373554614142-812229.iam.gserviceaccount.com'
+    jsonFile = file('../deployment_keys.json')
+}
+
+apply plugin: 'com.google.gms.google-services'

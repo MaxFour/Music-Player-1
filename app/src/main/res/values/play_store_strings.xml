@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The description in the Play Store for the paid version. It's important that this is well translated, and use your artistic license,
+    it doesn't have to be word-for-word, the idea is that it really sells the app!-->
+
+    <!-- The description in the Play Store for the free version. It's important that this is well translated, and use your artistic license,
+     it doesn't have to be word-for-word, the idea is that it really sells the app!-->
+
+    <!-- The short description in the Play Store (paid version). Maximum 80 characters! -->
+
+    <!-- The short description in the Play Store (free version). Maximum 80 characters! -->
+</resources>
