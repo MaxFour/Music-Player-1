@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="equalizer_activity_top_padding">32dp</dimen>
+    <dimen name="equalizer_activity_edge_padding">128dp</dimen>
+
+    <dimen name="header_view_height">250dp</dimen>
+
+</resources>

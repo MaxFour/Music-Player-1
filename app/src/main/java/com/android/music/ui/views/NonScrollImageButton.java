@@ -1,0 +1,22 @@
+package com.android.music.ui.views;
+
+import android.content.Context;
+import android.graphics.Rect;
+import android.util.AttributeSet;
+import android.widget.ImageButton;
+
+/**
+ * A custom {@link ImageButton} which prevents parent ScrollView scrolling when used as the
+ * anchor for a {@link android.support.v7.widget.PopupMenu}
+ */
+public class NonScrollImageButton extends android.support.v7.widget.AppCompatImageButton {
+
+    public NonScrollImageButton(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    public boolean requestRectangleOnScreen(Rect rectangle, boolean immediate) {
+        return false;
+    }
+}

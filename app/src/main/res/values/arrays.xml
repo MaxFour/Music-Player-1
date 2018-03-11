@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="baseThemeArray">
+        <item>@string/pref_title_theme_light</item>
+        <item>@string/pref_title_theme_dark</item>
+        <item>@string/pref_title_theme_black</item>
+    </string-array>
+
+    <array name="pastel_colors">
+        <item>@color/md_red_300</item>
+        <item>@color/md_pink_300</item>
+        <item>@color/md_purple_300</item>
+        <item>@color/md_deep_purple_300</item>
+        <item>@color/md_indigo_300</item>
+        <item>@color/md_blue_300</item>
+        <item>@color/md_light_blue_300</item>
+        <item>@color/md_cyan_300</item>
+        <item>@color/md_teal_300</item>
+        <item>@color/md_green_200</item>
+        <item>@color/md_light_green_300</item>
+        <item>@color/md_lime_300</item>
+        <item>@color/md_amber_300</item>
+        <item>@color/md_orange_300</item>
+        <item>@color/md_deep_orange_300</item>
+    </array>
+
+    <array name="span_count">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </array>
+
+    <string-array name="timerValues">
+        <item>@string/sleep_timer_5_mins</item>
+        <item>@string/sleep_timer_15_mins</item>
+        <item>@string/sleep_timer_30_mins</item>
+        <item>@string/sleep_timer_1_hour</item>
+        <item>@string/sleep_timer_set_minutes</item>
+    </string-array>
+
+</resources>
