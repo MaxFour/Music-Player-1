@@ -174,24 +174,6 @@ public class SettingsParentFragment extends BaseNavigationController implements
                     .plus(new ActivityModule(getActivity()))
                     .inject(this);
 
-            // About Preferences
-
-            Preference sitePreference = findPreference(SettingsManager.KEY_PREF_SITE);
-            if (sitePreference != null) {
-                sitePreference.setOnPreferenceClickListener(preference -> {
-                    aboutPresenter.siteClicked();
-                    return true;
-                });
-            }
-
-            Preference profilePreference = findPreference(SettingsManager.KEY_PREF_PROFILE);
-            if (profilePreference != null) {
-                profilePreference.setOnPreferenceClickListener(preference -> {
-                    aboutPresenter.profileClicked();
-                    return true;
-                });
-            }
-
             // Display
 
             Preference chooseTabsPreference = findPreference(SettingsManager.KEY_PREF_TAB_CHOOSER);
@@ -453,16 +435,6 @@ public class SettingsParentFragment extends BaseNavigationController implements
             if (versionPreference != null) {
                 versionPreference.setSummary(version);
             }
-        }
-
-        @Override
-        public void visitSite(Intent intent) {
-            startActivity(intent);
-        }
-
-        @Override
-        public void visitProfile(Intent intent) {
-            startActivity(intent);
         }
 
         @NonNull

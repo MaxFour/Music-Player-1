@@ -6,19 +6,14 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.android.music.BuildConfig;
-import com.android.music.R;
 import com.android.music.MusicApplication;
+import com.android.music.R;
 import com.android.music.model.CategoryItem;
 import com.android.music.ui.adapters.ViewType;
 
 public class SettingsManager {
 
     private static final String TAG = "SettingsManager";
-
-    // About
-    public static String KEY_PREF_SITE = "pref_site";
-    public static String KEY_PREF_PROFILE = "pref_profile";
 
     // Display
     public static String KEY_PREF_TAB_CHOOSER = "pref_tab_chooser";
@@ -438,29 +433,6 @@ public class SettingsManager {
 
     public boolean getSearchAlbums() {
         return getBool(KEY_SEARCH_ALBUMS, true);
-    }
-
-
-    // Changelog
-
-    private static final String KEY_VERSION_CODE = "version_code";
-
-    public void setVersionCode() {
-        setInt(KEY_VERSION_CODE, BuildConfig.VERSION_CODE);
-    }
-
-    public int getStoredVersionCode() {
-        return getInt(KEY_VERSION_CODE, -1);
-    }
-
-    private static final String KEY_CHANGELOG_SHOW_ON_LAUNCH = "show_on_launch";
-
-    public void setShowChangelogOnLaunch(boolean showOnLaunch) {
-        setBool(KEY_CHANGELOG_SHOW_ON_LAUNCH, showOnLaunch);
-    }
-
-    public boolean getShowChangelogOnLaunch() {
-        return getBool(KEY_CHANGELOG_SHOW_ON_LAUNCH, true);
     }
 
     // Playback

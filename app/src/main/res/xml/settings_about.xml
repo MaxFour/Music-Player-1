@@ -6,14 +6,4 @@
         android:key="pref_version"
         android:title="@string/pref_title_version"/>
 
-    <android.support.v7.preference.Preference
-        android:key="pref_site"
-        android:summary="@string/pref_summary_site"
-        android:title="@string/pref_title_site"/>
-
-    <android.support.v7.preference.Preference
-        android:key="pref_profile"
-        android:summary="@string/pref_summary_profile"
-        android:title="@string/pref_title_profile"/>
-
 </android.support.v7.preference.PreferenceScreen>

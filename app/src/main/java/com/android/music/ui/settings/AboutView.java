@@ -6,8 +6,4 @@ public interface AboutView {
 
     void setVersion(String version);
 
-    void visitSite(Intent intent);
-
-    void visitProfile(Intent intent);
-
 }
