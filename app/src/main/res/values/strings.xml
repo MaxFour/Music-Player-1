@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- ## Toast Messages ## -->
-
     <string name="app_name">Music</string>
-    <!-- Shown when a user attempts to edit tags, but they don't have a 'DocumentProvider' available to pick the directory of their music (and thus give permission to Shuttle)-->
+    <!-- Shown when a user attempts to edit tags, but they don't have a 'DocumentProvider' available to pick the directory of their music (and thus give permission to Music)-->
     <string name="R.string.toast_no_document_provider">No DocumentProvider available to handle permission request</string>
     <!-- Displayed when an M3U playlist is being saved, but it already exists -->
     <!-- Displayed when an M3U playlist save fails -->
@@ -36,25 +34,25 @@
     <!-- Individual song context menu item -->
     <string name="ringtone_menu">Set as ringtone</string>
     <!-- Toast after setting a song as phone ringtone -->
-    <string name="ringtone_set">\"<xliff:g example="Alarm Bell" id="name">%s</xliff:g>\" set as phone ringtone.</string>
+    <string name="ringtone_set">\"<xliff:g example="Alarm Bell" id="name">%s</xliff:g>\" set as phone ringtone</string>
     <!-- Toast if setting ringtone fails -->
     <string name="ringtone_set_failed">Couldn\'t set ringtone</string>
     <!-- Toasts after adding song(s) to playlists -->
     <plurals name="NNNtrackstoplaylist">
         <!-- message shown when one song was added -->
-        <item quantity="one">1 song added to playlist.</item>
+        <item quantity="one">%d song added to playlist.</item>
         <!-- message shown when zero or more than one song was added -->
         <item quantity="other"><xliff:g example="27" id="number">%d</xliff:g> songs added to playlist.</item>
     </plurals>
     <!-- Toast after selecting an empty playlist -->
-    <string name="emptyplaylist">Selected playlist is empty.</string>
+    <string name="emptyplaylist">Selected playlist is empty</string>
 
     <!-- -->
     <string name="initial_dir_set_message">Set as initial directory</string>
     <!-- Transient popup message shown after deleting a playlist -->
-    <string name="playlist_deleted_message">Playlist deleted.</string>
+    <string name="playlist_deleted_message">Playlist deleted</string>
     <!-- Transient popup message shown after renaming a playlist -->
-    <string name="playlist_renamed_message">Playlist renamed.</string>
+    <string name="playlist_renamed_message">Playlist renamed</string>
     <!-- Toast confirming that song(s) was/were deleted. -->
     <!-- -->
     <plurals name="NNNtrackstoqueue">
@@ -67,8 +65,8 @@
         </item>
     </plurals>
     <!-- Toasts after adding song(s) to playlists -->
-    <string name="song_to_favourites"><xliff:g id="song_name">%s</xliff:g> added to favorites.</string>
-    <string name="song_removed_from_favourites"><xliff:g id="song_name">%s</xliff:g> removed from favorites.</string>
+    <string name="song_to_favourites"><xliff:g id="song_name">%s</xliff:g> added to favorites</string>
+    <string name="song_removed_from_favourites"><xliff:g id="song_name">%s</xliff:g> removed from favorites</string>
 
     <!-- ## Dialogs ## -->
     <!-- Restart now button -->
@@ -114,24 +112,24 @@
     <!-- Text for the "cancel" button in the "delete" and "create playlist" confirmation dialogs -->
     <string name="cancel">Cancel</string>
     <!-- Delete confirmation dialog when deleting an entire artist -->
-    <string name="delete_album_artist_desc">All songs by <xliff:g id="album-artist">%s</xliff:g> will be permanently deleted.</string>
+    <string name="delete_album_artist_desc">All songs by <xliff:g id="album-artist">%s</xliff:g> will be permanently deleted</string>
     <!-- Delete confirmation dialog message when deleting artists -->
-    <string name="delete_album_artist_desc_multiple">All songs by the following album artists: <xliff:g id="album-artist">%s</xliff:g>will be permanently deleted.</string>
+    <string name="delete_album_artist_desc_multiple">All songs by the following album artists: <xliff:g id="album-artist">%s</xliff:g>will be permanently deleted</string>
     <!-- Delete confirmation dialog when deleting an entire album -->
-    <string name="delete_album_desc">All songs from the album <xliff:g id="album">%s</xliff:g> will be permanently deleted.</string>
+    <string name="delete_album_desc">All songs from the album <xliff:g id="album">%s</xliff:g> will be permanently deleted</string>
     <!-- Delete confirmation dialog message when deleting albums -->
     <string name="get_pro_button_play_store">Play Store</string>
     <string name="get_pro_button_amazon">Amazon</string>
 
-    <string name="delete_album_desc_multiple">All songs from the following albums: <xliff:g id="album">%s</xliff:g>will be permanently deleted.</string>
+    <string name="delete_album_desc_multiple">All songs from the following albums: <xliff:g id="album">%s</xliff:g>will be permanently deleted</string>
     <!-- Delete confirmation dialog when deleting a single song -->
-    <string name="delete_song_desc"><xliff:g id="song">%s</xliff:g> will be permanently deleted.</string>
+    <string name="delete_song_desc"><xliff:g id="song">%s</xliff:g> will be permanently deleted</string>
     <!-- Delete confirmation dialog message title when deleting songs -->
-    <string name="delete_song_desc_multiple">The following songs: <xliff:g id="song">%s</xliff:g>will be permanently deleted.</string>
+    <string name="delete_song_desc_multiple">The following songs: <xliff:g id="song">%s</xliff:g>will be permanently deleted</string>
     <!-- Toast shown when songs are successfully deleted -->
-    <string name="delete_songs_success_toast"><xliff:g id="number">%d</xliff:g> songs deleted.</string>
+    <string name="delete_songs_success_toast"><xliff:g id="number">%d</xliff:g> songs deleted</string>
     <!-- Toast shown when failing to delete songs-->
-    <string name="delete_songs_failure_toast">Couldn\'t delete songs.</string>
+    <string name="delete_songs_failure_toast">Couldn\'t delete songs</string>
     <!-- Delete confirmation dialog, confirmation button text -->
     <string name="button_ok">OK</string>
     <!-- -->
@@ -165,7 +163,7 @@
     <string name="widget_text_color">Text</string>
     <string name="widget_invert_icons">Invert icons</string>
     <!-- Text shown on widget when first loaded -->
-    <string name="widget_initial_text">Touch to select music.</string>
+    <string name="widget_initial_text">Touch to select music</string>
     <string name="widget_show_artwork">Show album art</string>
 
     <!-- ## Menu Headings ## -->
@@ -456,13 +454,13 @@
     <!-- Button text for saving tags  -->
     <string name="save">Save</string>
     <!-- Message displayed when tag editing fails -->
-    <string name="tag_edit_error">An error occurred editing tags.</string>
+    <string name="tag_edit_error">An error occurred editing tags</string>
     <string name="tag_error_lollipop">An error occurred editing tags. If the file is stored on an SD Card, \"Music\" might not have permission to access it.</string>
     <string name="tag_error_kitkat">An error occurred editing tags. Is the file stored on an SD Card? If so, Google have made tag editing impossible for this file.</string>
-    <string name="tag_editor_document_tree_message">Due to changes in Android 5.0, Google now require that you specify which folders on the SD card an app is allowed to edit.\n\nShuttle will now open a file picker. Please choose the parent folder of the files you wish to modify.</string>
+    <string name="tag_editor_document_tree_message">Due to changes in Android 5.0, Google now require that you specify which folders on the SD card an app is allowed to edit.\n\n"Music" will now open a file picker. Please choose the parent folder of the files you wish to modify.</string>
     <string name="tag_editor_check_permission">Checking for permissions. This may take a while…\n\nBlame Google!</string>
     <string name="tag_editor_document_tree_permission_failed">It seems that \"Music\" still doesn\'t have permission to edit the files. Double check the directory in the file picker.</string>
-    <string name="tag_retrieve_error">An error occurred retrieving tags.</string>
+    <string name="tag_retrieve_error">An error occurred retrieving tags</string>
 
     <!-- ## Folder browsing ## -->
     <!-- -->
@@ -548,19 +546,19 @@
 
     <!-- ## Empty list messages ## -->
     <!-- -->
-    <string name="empty_artists">No artists detected. Copy some songs over to your device.</string>
+    <string name="empty_artists">No artists detected. Copy some songs over to your device</string>
     <!-- -->
-    <string name="empty_albums">No albums detected. Copy some songs over to your device.</string>
+    <string name="empty_albums">No albums detected. Copy some songs over to your device</string>
     <!-- -->
-    <string name="empty_genres">No genres detected.</string>
+    <string name="empty_genres">No genres detected</string>
     <!-- -->
     <string name="empty_playlist">This playlist is empty. Long press on an artist, album or song and press \'add to playlist\', or the + icon to get started.</string>
     <!-- -->
-    <string name="empty_songlist">No songs detected. Copy some songs over to your device.</string>
+    <string name="empty_songlist">No songs detected. Copy some songs over to your device</string>
     <!-- -->
-    <string name="empty_suggested">Play some more music, and suggestions will show up here.</string>
+    <string name="empty_suggested">Play some more music, and suggestions will show up here</string>
 
-    <string name="empty_search">No search results found.</string>
+    <string name="empty_search">No search results found</string>
 
     <!-- ## Sort options ## -->
     <string name="sorting">Sorting</string>
@@ -616,7 +614,7 @@
     <string name="button_done">Done</string>
 
     <!-- Title of time span picker -->
-    <string name="weekpicker_title">Choose how many weeks into the past \"Music\" should search for \'recent\' music.</string>
+    <string name="weekpicker_title">Choose how many weeks into the past \"Music\" should search for \'recent\' music</string>
 
     <!-- ## Notification bar text ## -->
     <!-- Message in notification bar when downloading -->
@@ -651,7 +649,7 @@
     <!-- Used in artists list view, indicates how many albums exist for a given artist. -->
     <plurals name="Nalbums">
         <!-- number of albums is one -->
-        <item quantity="one">1 album</item>
+        <item quantity="one">%d album</item>
         <!-- number of albums is not equal to one -->
         <item quantity="other"><xliff:g id="count">%d</xliff:g> albums</item>
     </plurals>
@@ -718,7 +716,6 @@
     <string name="btn_fab_shuffle">Shuffle &amp; play current list</string>
     <!-- Accessibility now playing 'mini player' description. Example: Now playing <Wannabe> by <Spice Girls> -->
     <string name="btn_now_playing">Now playing %1$s by %2$s</string>
-    <!-- Accessibility 'show lyrics' -->
 
     <string name="blacklist_empty">You haven\'t blacklisted any songs!</string>
     <string name="whitelist_empty">You haven\'t whitelisted any folders!</string>
@@ -732,7 +729,7 @@
     <string name="song_info_bitrate_suffix">" kbps"</string>
     <string name="song_info_sample_rate_suffix">" kHz"</string>
     <string name="iab_purchase_restored">Purchase Restored. Please restart \"Music\"</string>
-    <string name="iab_purchase_not_found">No previous purchase found.</string>
+    <string name="iab_purchase_not_found">No previous purchase found</string>
     <string name="iab_already_upgraded">\"Music\" is already upgraded. Try restarting the app.</string>
     <string name="iab_purchase_failed">Something went wrong. Please try again later…</string>
     <string name="snackbar_rate_text">Enjoy using \"Music\"?</string>
@@ -778,17 +775,12 @@
     <string name="search_artists">Artists</string>
     <string name="search_albums">Albums</string>
 
-    <!-- Changelog -->
-    <string name="changelog_show_on_launch">Show on launch</string>
-
-    <!-- Lyrics -->
-
     <!-- QuickLyric button -->
     <string name="quicklyric">QuickLyric</string>
     <!-- Button for lyrics -->
     <string name="lyrics">Lyrics</string>
     <!-- Shown when there are no lyrics -->
-    <string name="no_lyrics">No embedded lyrics found.</string>
+    <string name="no_lyrics">No embedded lyrics found</string>
     <!-- QuickLyric info dialog message-->
     <string name="quicklyric_info">QuickLyric is an open-source lyric fetcher on the Google Play Store.\n\nOnce installed, QuickLyric will be opened from \"Music\" whenever you hit the \'QuickLyric\' menu button.</string>
 
@@ -817,12 +809,13 @@
     <string name="widget_4x2">Music 4x2</string>
     <string name="widget_4x4">Music 4x4</string>
 
-    <!-- Developer's site -->
-    <string name="pref_title_site">Developer\'s site</string>
-    <string name="pref_summary_site">Visit developer\'s site</string>
-
-    <!-- Author profile -->
-    <string name="pref_title_profile">Author profile</string>
-    <string name="pref_summary_profile">Visit author\'s profile on 4PDA.ru</string>
+    <string name="md_back_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Back</string>
+    <string name="md_cancel_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Cancel</string>
+    <string name="md_choose_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Choose</string>
+    <string name="md_custom_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Custom</string>
+    <string name="md_done_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Done</string>
+    <string name="md_error_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Error</string>
+    <string name="md_presets_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Presets</string>
+    <string name="md_storage_perm_error" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Your app has not been granted the READ_EXTERNAL_STORAGE permission</string>
 
 </resources>

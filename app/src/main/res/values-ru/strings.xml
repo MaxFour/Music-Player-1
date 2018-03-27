@@ -2,7 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="app_name">Музыка</string>
-    <!-- ## Toast Messages ## -->
     <!-- Shown when a user attempts to edit tags, but they don't have a 'DocumentProvider' available to pick the directory of their music (and thus give permission to Music)-->
     <string name="R.string.toast_no_document_provider">Провайдер документов недоступен, чтобы предоставить разрешение на запрос</string>
     <!-- Displayed when an M3U playlist is being saved, but it already exists -->
@@ -35,31 +34,37 @@
     <!-- Individual song context menu item -->
     <string name="ringtone_menu">Установить на рингтон</string>
     <!-- Toast after setting a song as phone ringtone -->
-    <string name="ringtone_set">\"<xliff:g example="Alarm Bell" id="name">%s</xliff:g>\" выбран как рингтон.</string>
+    <string name="ringtone_set">\"<xliff:g example="Alarm Bell" id="name">%s</xliff:g>\" выбран как рингтон</string>
     <!-- Toast if setting ringtone fails -->
     <string name="ringtone_set_failed">Невозможно установить на рингтон</string>
     <!-- Toasts after adding song(s) to playlists -->
+    <plurals name="NNNtrackstoplaylist">
+        <item quantity="one">%d песня добавлена в плейлист</item>
+        <item quantity="few">%d песни добавлены в плейлист</item>
+        <item quantity="many">%d песен добавлены в плейлист</item>
+        <item quantity="other">%d песни добавлены в плейлист</item>
+    </plurals>
     <!-- Toast after selecting an empty playlist -->
-    <string name="emptyplaylist">Выбранный плейлист пуст.</string>
+    <string name="emptyplaylist">Выбранный плейлист пуст</string>
+
     <!-- -->
     <string name="initial_dir_set_message">Установить как начальную папку</string>
     <!-- Transient popup message shown after deleting a playlist -->
-    <string name="playlist_deleted_message">Плейлист удален.</string>
+    <string name="playlist_deleted_message">Плейлист удален</string>
     <!-- Transient popup message shown after renaming a playlist -->
-    <string name="playlist_renamed_message">Плейлист переименован.</string>
+    <string name="playlist_renamed_message">Плейлист переименован</string>
     <!-- Toast confirming that song(s) was/were deleted. -->
     <!-- -->
     <plurals name="NNNtrackstoqueue">
-        <item quantity="one">%d песня добавлена в очередь.</item>
-        <item quantity="other">Песен в очереди: \"<xliff:g id="number" example="27">%d</xliff:g>\"</item>
-        <item quantity="few"><xliff:g id="number" example="27">%d</xliff:g>
-песни добавлены в очередь.</item>
-        <item quantity="many"><xliff:g id="number" example="27">%d</xliff:g>
-песен добавлены в очередь.</item>
+        <item quantity="one">%d песня добавлена в очередь</item>
+        <item quantity="other">Песен в очереди: %d</item>
+        <item quantity="few">%d песни добавлены в очередь</item>
+        <item quantity="many">%dпесен добавлены в очередь</item>
     </plurals>
     <!-- Toasts after adding song(s) to playlists -->
-    <string name="song_to_favourites"><xliff:g id="song_name">%s</xliff:g> добавлено в избранное</string>
-    <string name="song_removed_from_favourites"><xliff:g id="song_name">%s</xliff:g> удалено из избранного</string>
+    <string name="song_to_favourites"><xliff:g id="song_name">%s</xliff:g> добавлен в избранное</string>
+    <string name="song_removed_from_favourites"><xliff:g id="song_name">%s</xliff:g> удалён из избранного</string>
+
     <!-- ## Dialogs ## -->
     <!-- Restart now button -->
     <string name="restart_button">Перезапустить</string>
@@ -87,12 +92,11 @@
     <!-- -->
     <string name="upgraded_title">Спасибо</string>
     <string name="upgraded_message">Вы успешно обновились до Музыка+. Спасибо за Вашу поддержку!\nПожалуйста, перезапустите приложение чтобы включить все функции</string>
-    <string name="upgrade_dialog_message">• Поддержка ChromeCast
-\n• Дополнительные темы
-\n• Редактор тэгов
-\n• Просмотр папок
-\n• Поддержка разработки ❤️</string>
+
+    <string name="upgrade_dialog_message">"• Поддержка ChromeCast\n• Дополнительные темы\n• Редактор тэгов\n• Просмотр папок\n• Поддержка разработки ❤️"</string>
+
     <string name="upgrade_required_folders">Обновиться до Музыка+</string>
+
     <string name="btn_upgrade">Обновить</string>
     <!-- -->
     <string name="get_pro_button_no">Спасибо, не надо</string>
@@ -105,23 +109,24 @@
     <!-- Text for the "cancel" button in the "delete" and "create playlist" confirmation dialogs -->
     <string name="cancel">Отмена</string>
     <!-- Delete confirmation dialog when deleting an entire artist -->
-    <string name="delete_album_artist_desc">Все песни от <xliff:g id="album-artist">%s</xliff:g> будут безвозвратно удалены.</string>
+    <string name="delete_album_artist_desc">Все песни от <xliff:g id="album-artist">%s</xliff:g> будут безвозвратно удалены</string>
     <!-- Delete confirmation dialog message when deleting artists -->
-    <string name="delete_album_artist_desc_multiple">Все песни следующих исполнителей: <xliff:g id="album-artist">%s</xliff:g> будут безвозвратно удалены.</string>
+    <string name="delete_album_artist_desc_multiple">Все песни следующих исполнителей: <xliff:g id="album-artist">%s</xliff:g> будут безвозвратно удалены</string>
     <!-- Delete confirmation dialog when deleting an entire album -->
-    <string name="delete_album_desc">Все песни из альбома <xliff:g id="album">%s</xliff:g> будут безвозвратно удалены.</string>
+    <string name="delete_album_desc">Все песни из альбома <xliff:g id="album">%s</xliff:g> будут безвозвратно удалены</string>
     <!-- Delete confirmation dialog message when deleting albums -->
     <string name="get_pro_button_play_store">Play Маркет</string>
     <string name="get_pro_button_amazon">Amazon</string>
-    <string name="delete_album_desc_multiple">Все песни из следующих альбомов: <xliff:g id="album">%s</xliff:g> будут безвозвратно удалены.</string>
+
+    <string name="delete_album_desc_multiple">Все песни из следующих альбомов: <xliff:g id="album">%s</xliff:g> будут безвозвратно удалены</string>
     <!-- Delete confirmation dialog when deleting a single song -->
-    <string name="delete_song_desc"><xliff:g id="song">%s</xliff:g> будет безвозвратно удалена.</string>
+    <string name="delete_song_desc"><xliff:g id="song">%s</xliff:g> будет безвозвратно удалена</string>
     <!-- Delete confirmation dialog message title when deleting songs -->
-    <string name="delete_song_desc_multiple">Следующие песни: <xliff:g id="song">%s</xliff:g> будут безвозвратно удалены.</string>
+    <string name="delete_song_desc_multiple">Следующие песни: <xliff:g id="song">%s</xliff:g> будут безвозвратно удалены</string>
     <!-- Toast shown when songs are successfully deleted -->
-    <string name="delete_songs_success_toast">Песни удалены: <xliff:g id="number">%d</xliff:g></string>
+    <string name="delete_songs_success_toast">Песен удалено: <xliff:g id="number">%d</xliff:g></string>
     <!-- Toast shown when failing to delete songs-->
-    <string name="delete_songs_failure_toast">Невозможно удалить песни.</string>
+    <string name="delete_songs_failure_toast">Невозможно удалить песни</string>
     <!-- Delete confirmation dialog, confirmation button text -->
     <string name="button_ok">ОК</string>
     <!-- -->
@@ -134,6 +139,7 @@
     <string name="dialog_title_set_ringtone">Установить рингтон</string>
     <!-- "Set Ringtone" message -->
     <string name="dialog_message_set_ringtone">Приложение \"Музыка\" просит разрешение на \'запись настроек\', чтобы установить рингтон.  После предоставления разрешения, попробуйте установить рингтон снова.</string>
+
     <!-- Message displayed in dialog when attempting to add duplicates to playlist -->
     <string name="dialog_message_playlist_add_duplicate"><xliff:g id="artist">%1$s</xliff:g> - <xliff:g id="song">%2$s</xliff:g> уже существует в этом плейлисте. Всё равно добавить?</string>
     <!-- Checkbox text 'apply to all' -->
@@ -146,6 +152,7 @@
     <string name="dialog_button_playlist_duplicate_skip">Пропустить</string>
     <!-- Checkbox text 'always add duplicates' -->
     <string name="dialog_checkbox_playlist_duplicate_always_add">Всегда добавлять дубликаты</string>
+
     <!-- ## Widgets ## -->
     <!-- Checkbox text to invert colors of buttons & text -->
     <string name="widget_background_color">Фон</string>
@@ -153,8 +160,9 @@
     <string name="widget_text_color">Текст</string>
     <string name="widget_invert_icons">Инвертировать значки</string>
     <!-- Text shown on widget when first loaded -->
-    <string name="widget_initial_text">Коснитесь для выбора музыки.</string>
+    <string name="widget_initial_text">Коснитесь для выбора музыки</string>
     <string name="widget_show_artwork">Показать обложку альбома</string>
+
     <!-- ## Menu Headings ## -->
     <!-- Context menu in navigation drawer - option to save playlist as M3U -->
     <string name="export_playlist">Экспорт</string>
@@ -189,9 +197,12 @@
     <!-- -->
     <string name="library_title">Библиотека</string>
     <!-- -->
+
     <!-- Library screen, menu item -->
     <string name="search_title">Поиск</string>
+
     <string name="search_filter">Фильтр</string>
+
     <!-- Playlist context menu item to clear the selected playlist. -->
     <string name="clear_playlist_menu">Очистить</string>
     <!-- Playlist context menu item to edit the selected playlist -->
@@ -202,6 +213,7 @@
     <string name="delete_item">Удалить с диска</string>
     <!-- Menu item to play back all the songs in the currently showing list in shuffle mode -->
     <string name="shuffle_all">Перемешать все</string>
+
     <!-- title of the "current playlist" screen when not in party shuffle mode -->
     <string name="nowplaying_title">Сейчас воспроизводится</string>
     <!-- -->
@@ -212,11 +224,13 @@
     <string name="heading_more">Больше</string>
     <!-- Share option-->
     <string name="share">Поделиться</string>
+
     <!-- ## Navigation Drawer ## -->
     <!-- Accessibility description 'open navigation drawer'-->
     <string name="navigation_drawer_open">Открыть панель навигации</string>
     <!-- Accessibility description 'close navigation drawer'-->
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
+
     <!-- ## Preference Menu ## -->
     <!--Settings category for 'navigation' items -->
     <string name="pref_category_navigation">Навигация</string>
@@ -248,10 +262,12 @@
     <string name="pref_title_theme_dark">Тёмная</string>
     <string name="pref_title_theme_light">Светлая</string>
     <string name="pref_title_theme_black">Чёрная</string>
+
     <string name="pref_group_palette">Палитра</string>
     <string name="pref_title_palette">Использовать цвета из обложки</string>
     <string name="pref_summary_palette">Если включено, приложение \"Музыка\" обнаружит более заметный цвет из обложки и будет использовать его в качестве основного во всём приложении</string>
     <string name="pref_title_palette_now_playing">Только на экране \'Сейчас воспроизводится\'</string>
+
     <!--Settings title for whitelist/blacklist-->
     <string name="pref_title_blacklist">Белый/чёрный список</string>
     <!--Settings title for viewing blacklist-->
@@ -368,19 +384,24 @@
     <string name="pref_title_display_remaining_time">Показывать оставшееся время</string>
     <!-- Settings summary for toggling between remaining time and total time -->
     <string name="pref_summary_display_remaining_time">Показывать оставшееся время вместо продолжительности на экране \'Сейчас воспроизводится\'</string>
+
     <!-- Settings title for the playback options -->
     <string name="pref_title_playback">Воспроизведение</string>
     <!-- Settings title for toggling 'remember shuff'e-->
     <string name="pref_title_remember_shuffle">Запомнить режим перемешивания</string>
     <!-- Settings summary for toggling 'remember shuff'e-->
     <string name="pref_summary_remember_shuffle">Режим перемешивания не отключится при воспроизведении нового списка песен</string>
+
     <string name="pref_title_version">Версия</string>
+
     <string name="pref_title_headset_beep">Звук при пропуске</string>
     <string name="pref_summary_headset_beep">Звук при пропуске песни через управление наушников</string>
+
     <!-- Settings title for ignore playlist duplicates -->
     <string name="pref_title_ignore_duplicates">Игнорировать дубликаты плейлиста</string>
     <!-- Settings summary for ignore playlist duplicates -->
     <string name="pref_summary_ignore_duplicates">Не искать и не предлагать пропуск дубликатов при добавлении песен в плейлист</string>
+
     <!-- Displayed on the settings page to choose the default main page -->
     <string name="select_default_page">Выбрать страницу по умолчанию</string>
     <!-- Option to view the list as a list or grid -->
@@ -395,6 +416,7 @@
     <string name="view_options_grid_card">Сетка: карточки</string>
     <!-- Grid size (number of columns in grid view) -->
     <string name="menu_grid_size">Размер сетки</string>
+
     <!-- -->
     <string name="whitelist_title">Белый список</string>
     <!-- -->
@@ -403,6 +425,7 @@
     <string name="blacklist_description">Песни можно добавить в чёрный список, нажав три точки справа от песни и выбрав \'Чёрный список\'</string>
     <!-- -->
     <string name="whitelist_description">Песни можно добавить в белый список, нажав кнопку настроек при просмотре папок и выбрав \'Белый список\'. Затем нужно выбрать папки, которые Вы хотите включить в белый список.</string>
+
     <!-- ## Detail Activity - Info for artists/albums ## -->
     <!-- The viewpager tab title for the artist/album info -->
     <string name="info">Биография</string>
@@ -410,6 +433,7 @@
     <string name="no_artist_info">Нет информации об этом исполнителе</string>
     <!-- Displayed when no album information can be retrieved -->
     <string name="no_album_info">Нет информации об этом альбоме</string>
+
     <!-- ## Tag Editor ## -->
     <!-- Context option save tags -->
     <string name="edit_tags">Редактировать тэги</string>
@@ -420,18 +444,21 @@
     <string name="track_total">Всего песен</string>
     <string name="disc_number">Диск №</string>
     <string name="disc_total">Всего дисков</string>
+
     <!-- Track count. i.e "1 of 15" -->
     <string name="track_count"><xliff:g id="track">%1$s</xliff:g> из <xliff:g id="total tracks">%2$s</xliff:g></string>
+
     <!-- Button text for saving tags  -->
     <string name="save">Сохранить</string>
     <!-- Message displayed when tag editing fails -->
-    <string name="tag_edit_error">Ошибка при редактировании тэгов.</string>
+    <string name="tag_edit_error">Ошибка при редактировании тэгов</string>
     <string name="tag_error_lollipop">Случилась ошибка при редактировании тэгов. Если файл расположен на SD-карте, приложение \"Музыка\" может не иметь разрешения на доступ к нему.</string>
     <string name="tag_error_kitkat">Случилась ошибка при редактировании тэгов. Файл расположен на SD-карте? Если так, то Google сделал невозможным редактирование тэгов этого файла.</string>
     <string name="tag_editor_document_tree_message">Вследствие изменений в Android 5.0 Вам необходимо установить, какие папки на SD-карте приложению можно редактировать.\n\nСейчас приложение "Музыка" откроет окно проводника. Пожалуйста, выберите начальную директорию, содержащую файлы, какие Вы хотите редактировать.</string>
     <string name="tag_editor_check_permission">Проверка разрешений. Это займёт время…\n\nБлагодарите Google!</string>
     <string name="tag_editor_document_tree_permission_failed">Похоже, приложение \"Музыка\" всё ещё не имеет разрешения редактировать файлы. Проверьте директорию в окне проводника.</string>
-    <string name="tag_retrieve_error">Ошибка при получении тэгов.</string>
+    <string name="tag_retrieve_error">Ошибка при получении тэгов</string>
+
     <!-- ## Folder browsing ## -->
     <!-- -->
     <string name="rename_folder">Переименовать папку</string>
@@ -444,17 +471,10 @@
     <!-- Label in folder view - number of folders within the current folder -->
     <string name="onefolder">1 папка</string>
     <plurals name="Nfolders">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 
-папки</item>
-        <item quantity="few">"
-<xliff:g id="count">%d</xliff:g> 
-папки"</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> 
-папок</item>
-        <item quantity="one">"
-            <xliff:g id="count">%d</xliff:g>
-            папка
-        "</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> папки</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> папки</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> папок</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> папка</item>
     </plurals>
     <!-- -->
     <string name="parent_folder">Родительская папка</string>
@@ -467,6 +487,7 @@
     <string name="scan_complete">Сканирование завершено</string>
     <!-- Scanning-->
     <string name="scanning">Сканирование…</string>
+
     <!-- ## Main Headings ## -->
     <!-- Artist screen title -->
     <string name="artists_title">Исполнители</string>
@@ -502,6 +523,7 @@
     <string name="genre_title">Жанр</string>
     <!-- Album artist (singular)-->
     <string name="album_artist_title">Исполнитель альбома</string>
+
     <!-- ## Equalizer ## -->
     <!-- Menu item to open the equalizer -->
     <string name="equalizer">Эквалайзер</string>
@@ -515,40 +537,48 @@
     <string name="open_dsp">Сторонний эквалайзер</string>
     <!-- Equalizer 'custom' preset -->
     <string name="custom">Пользовательский</string>
+
     <!-- ## Empty list messages ## -->
     <!-- -->
-    <string name="empty_artists">Исполнители не найдены. Скопируйте несколько песен на Ваше устройство.</string>
+    <string name="empty_artists">Исполнители не найдены. Скопируйте несколько песен на Ваше устройство</string>
     <!-- -->
-    <string name="empty_albums">Альбомы не найдены. Скопируйте несколько песен на Ваше устройство.</string>
+    <string name="empty_albums">Альбомы не найдены. Скопируйте несколько песен на Ваше устройство</string>
     <!-- -->
-    <string name="empty_genres">Жанры не найдены.</string>
+    <string name="empty_genres">Жанры не найдены</string>
     <!-- -->
     <string name="empty_playlist">Плейлист пуст. Нажмите и удерживайте название исполнителя, альбома или песни, затем нажмите \'Добавить в плейлист\' или значок +, чтобы начать.</string>
     <!-- -->
-    <string name="empty_songlist">Песни не найдены. Скопируйте несколько песен на Ваше устройство.</string>
+    <string name="empty_songlist">Песни не найдены. Скопируйте несколько песен на Ваше устройство</string>
     <!-- -->
-    <string name="empty_suggested">Послушайте больше музыки, и здесь будут отображаться рекомендации.</string>
-    <string name="empty_search">Нет результатов поиска.</string>
+    <string name="empty_suggested">Послушайте больше музыки, и здесь будут отображаться рекомендации</string>
+    <string name="empty_search">Нет результатов поиска</string>
+
     <!-- ## Sort options ## -->
     <string name="sorting">Сортировка</string>
+
     <string name="sort_default">По умолчанию</string>
     <string name="sort_ascending">По возрастанию</string>
+
     <string name="sort_artist_name">Имя исполнителя</string>
     <string name="sort_album_name">Название альбома</string>
     <string name="sort_album_year">Год записи альбома</string>
+
     <string name="sort_song_name">Название песни</string>
     <string name="sort_song_year">Год записи песни</string>
     <string name="sort_song_duration">Продолжительность</string>
     <string name="sort_song_track_number">Песня №</string>
     <string name="sort_song_date_added">Дата добавления</string>
+
     <string name="sort_folders_default">По умолчанию</string>
     <string name="sort_folders_count">Количество</string>
+
     <string name="sort_files_default">По умолчанию</string>
     <string name="sort_files_file_name">Имя файла</string>
     <string name="sort_files_size">Размер</string>
     <string name="sort_files_song_artist_name">Имя исполнителя</string>
     <string name="sort_files_album_name">Название альбома</string>
     <string name="sort_files_track_name">Название песни</string>
+
     <!-- ## Sleep Timer ## -->
     <!-- Sleep timer title -->
     <string name="sleep_timer">Таймер сна</string>
@@ -572,13 +602,17 @@
     <string name="sleep_timer_1_hour">1 час</string>
     <!-- Sleep timer label "Minutes" (limited space here) -->
     <string name="sleep_timer_label_minutes">Мин</string>
+
     <!-- Button name in time span picker -->
     <string name="button_done">Применить</string>
+
     <!-- Title of time span picker -->
-    <string name="weekpicker_title">Выберите, сколько недель песни будут рассматриваться как \'недавние\'.</string>
+    <string name="weekpicker_title">Выберите, сколько недель песни будут рассматриваться как \'недавние\'</string>
+
     <!-- ## Notification bar text ## -->
     <!-- Message in notification bar when downloading -->
     <string name="notif_downloading_art">Загрузка обложки</string>
+
     <!-- ## SD card error messages ##-->
     <!-- Title of screen when no sd card is present -->
     <string name="sdcard_missing_title">SD-карта отсутствует</string>
@@ -589,6 +623,7 @@
     <!-- label underneath icon used to indicate that the sd card is present, but currently unavailable -->
     <string name="sdcard_busy_title_nosdcard" msgid="1162763571147174655">USB-накопитель недоступен</string>
     <!-- label underneath icon used to indicate sd card is mounted to your computer via USB -->
+
     <!-- ## Playlist creation ## -->
     <!-- Template for newly created playlist name -->
     <string name="new_playlist_name_template">Новый плейлист <xliff:g id="number">%d</xliff:g></string>
@@ -596,6 +631,7 @@
     <string name="create_playlist_create_text">Сохранить</string>
     <!-- Button name when saving a playlist and the new playlist will overwrite an existing one -->
     <string name="create_playlist_overwrite_text">Перезаписать</string>
+
     <!-- ## Various plurals ## -->
     <!-- used in various places to indicate there is one song for a given artist or album -->
     <string name="onesong">1 песня</string>
@@ -607,6 +643,13 @@
         <item quantity="many"><xliff:g id="count">%d</xliff:g> песен</item>
     </plurals>
     <!-- Used in artists list view, indicates how many albums exist for a given artist. -->
+    <plurals name="Nalbums">
+        <item quantity="one">%d альбом</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> альбома</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> альбомов</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> альбомы</item>
+    </plurals>
+
     <!--## Miscellaneous ##-->
     <!-- Tag editor 'comment' field-->
     <string name="comment">Комментарий</string>
@@ -615,25 +658,28 @@
     <!-- Action bar button text for saving a selected items to whitelist -->
     <string name="save_whitelist">Сохранить белый список</string>
     <!-- DashClock Extension Description -->
-    <string name="extension_description">Показываnm информацию о песне</string>
+    <string name="extension_description">Показывать информацию о песне</string>
     <!-- Week Selector title -->
     <string name="week_selector">Количество недель</string>
     <!-- Displayed under the 'Most Played' section of the 'suggested' tab.. Artist, Album, Song -->
     <string name="suggested_most_played_songs_subtitle">Топ 20 песен</string>
     <!-- Displayed under the 'Recent' section of the 'suggested' tab.. Artist, Album, Song  -->
     <string name="suggested_recent_title">Недавние</string>
-    <string name="suggested_recent_subtitle">Недавно воспроизводимые альбомы</string>
+    <string name="suggested_recent_subtitle">Недавно воспроизводённые альбомы</string>
     <string name="suggested_favorite_subtitle">Избранные песни</string>
     <string name="suggested_recently_added_subtitle">Недавно добавленные альбомы</string>
     <!-- Shows when multiple items are selected after-long pressing-->
-    <string name="action_mode_selection_count"><xliff:g id="number">%d</xliff:g> выбрано</string>
+    <string name="action_mode_selection_count">Выбрано: <xliff:g id="number">%d</xliff:g></string>
+
     <!-- ## Unknown artist/album metadata ##-->
     <!-- Default value if album year unknown -->
     <string name="unknown_year">Неизвестный год</string>
     <!-- Song info overflow option-->
     <string name="song_info">Информация о песне</string>
+
     <!-- Artwork Download Service Label-->
     <string name="download_service">Сервис загрузки</string>
+
     <!-- Accessibility button description -->
     <string name="btn_play">Воспроизвести</string>
     <!-- Accessibility button description -->
@@ -647,6 +693,7 @@
     <!-- Accessibility button description -->
     <!-- Accessibility button description -->
     <string name="btn_close">Закрыть</string>
+
     <!-- Accessibility overflow button. Example: "<Spice Girls> options"-->
     <string name="btn_options">%s настройки</string>
     <!-- Accessibility button description -->
@@ -664,7 +711,7 @@
     <string name="btn_fab_shuffle">Перемешать и воспроизвести текущий список</string>
     <!-- Accessibility now playing 'mini player' description. Example: Now playing <Wannabe> by <Spice Girls> -->
     <string name="btn_now_playing">Сейчас воспроизводится %1$s от %2$s</string>
-    <!-- Accessibility 'show lyrics' -->
+
     <string name="blacklist_empty">Вы не внесли в чёрный список ни одной песни!</string>
     <string name="whitelist_empty">Вы не внесли в белый список ни одной песни!</string>
     <string name="dialog_song_info_title">Информация о песне</string>
@@ -677,12 +724,13 @@
     <string name="song_info_bitrate_suffix">" кбит/с"</string>
     <string name="song_info_sample_rate_suffix">" кГц"</string>
     <string name="iab_purchase_restored">Покупка восстановлена. Пожалуйста, перезапустите приложение \"Музыка\"</string>
-    <string name="iab_purchase_not_found">Прошлая покупка не найдена.</string>
+    <string name="iab_purchase_not_found">Прошлая покупка не найдена</string>
     <string name="iab_already_upgraded">Приложение \"Музыка\" уже куплено. Попробуйте перезапустить приложение.</string>
     <string name="iab_purchase_failed">Что-то пошло не так. Пожалуйста, попробуйте позже…</string>
     <string name="snackbar_rate_text">Нравится приложение \"Музыка\"?</string>
     <string name="snackbar_rate_action">Оцените его!</string>
     <string name="dialog_create_playlist_error">Ошибка при создании плейлиста</string>
+
     <!-- Artwork picker -->
     <string name="artwork_edit">Выбрать обложку</string>
     <string name="artwork_type_media_store">Media Store</string>
@@ -691,6 +739,7 @@
     <string name="artwork_type_itunes">iTunes</string>
     <string name="artwork_type_custom">Сбросить</string>
     <string name="artwork_gallery">Галерея</string>
+
     <!-- Launcher Shortcuts -->
     <!-- "Shuffle" Shortcut label. Max 10 characters.-->
     <string name="shortcut_shuffle_short_label">Перемешать</string>
@@ -698,35 +747,38 @@
     <string name="shortcut_shuffle_long_label">Перемешать все</string>
     <!-- "Shuffle" Shortcut label disabled. Shows when shuffle not available (I don't think this ever happens)-->
     <string name="shortcut_shuffle_disabled">Перемешивание недоступно</string>
+
     <!-- "Play" Shortcut label. Max 10 characters.-->
     <string name="shortcut_play_short_label">Воспроизвести</string>
     <!-- "Play" Shortcut long label. Max 25 characters.-->
     <string name="shortcut_play_long_label">Воспроизвести</string>
     <!-- "Play" Shortcut label disabled. Shows when music is already playing-->
     <string name="shortcut_play_disabled">Уже воспроизводится</string>
+
     <!-- "Folders" Shortcut label. Max 10 characters.-->
     <string name="shortcut_folders_short_label">Папки</string>
     <!-- "Folders" Shortcut long label. Max 25 characters.-->
     <string name="shortcut_folders_long_label">Открыть просмотр папок</string>
     <!-- "Folders" Shortcut label disabled. (I don't think this ever happens)-->
     <string name="shortcut_folders_disabled">Папки недоступны</string>
+
     <!-- Displayed in list of songs for multi-disc album. E.g "Disc 1)-->
     <string name="disc_number_label">Диск <xliff:g id="number">%d</xliff:g></string>
+
     <!-- Search Filter-->
     <string name="search_fuzzy">Неопределённый</string>
     <string name="search_artists">Исполнители</string>
     <string name="search_albums">Альбомы</string>
-    <!-- Changelog -->
-    <string name="changelog_show_on_launch">Показывать при запуске</string>
-    <!-- Lyrics -->
+
     <!-- QuickLyric button -->
     <string name="quicklyric">QuickLyric</string>
     <!-- Button for lyrics -->
     <string name="lyrics">Тексты песни</string>
     <!-- Shown when there are no lyrics -->
-    <string name="no_lyrics">Не найдены встроенные тексты</string>
+    <string name="no_lyrics">Встроенные тектсы песни не найдены</string>
     <!-- QuickLyric info dialog message-->
     <string name="quicklyric_info">QuickLyric является сборником текстов песен с открытым исходным кодом в Google Play Маркете.\n\nПосле установки, QuickLyric будет открываться из приложения \"Музыка\" всякий раз когда Вы будете нажимать кнопку меню \'QuickLyric\'.</string>
+
     <!-- "Playlist" Shortcut label. Max 10 characters.-->
     <string name="shortcut_playlist_short_label">Плейлист</string>
     <!-- "Playlist" Shortcut long label. Max 25 characters.-->
@@ -735,6 +787,7 @@
     <string name="shortcut_playlist_disabled">Плейлист недоступен</string>
     <!-- Displayed at the top of the album list, album shuffle mode-->
     <string name="shuffle_albums">Перемешать альбом</string>
+
     <string name="number_picker_seperator">.</string>
     <string name="hms_picker_hours_label">Ч</string>
     <string name="hms_picker_minutes_label">М</string>
@@ -751,10 +804,14 @@
     <string name="widget_2x1">Музыка 2x1</string>
     <string name="widget_4x2">Музыка 4x2</string>
     <string name="widget_4x4">Музыка 4x4</string>
-    <!-- Developer's site -->
-    <string name="pref_title_site">Сайт разработчика</string>
-    <string name="pref_summary_site">Посетить сайт разработчика</string>
-    <!-- Profile -->
-    <string name="pref_title_profile">Профиль автора</string>
-    <string name="pref_summary_profile">Посетить профиль автора на 4PDA.ru</string>
+
+    <string name="md_back_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Назад</string>
+    <string name="md_cancel_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Отмена</string>
+    <string name="md_choose_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Выбрать</string>
+    <string name="md_custom_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Пользовательский</string>
+    <string name="md_done_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Применить</string>
+    <string name="md_error_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Ошибка</string>
+    <string name="md_presets_label" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Палитра</string>
+    <string name="md_storage_perm_error" xmlns:tools="http://schemas.android.com/tools" tools:override="true">Приложению нужно разрешение на чтение внешнего хранилища</string>
+
 </resources>
