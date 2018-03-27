@@ -148,9 +148,9 @@ public class MainController extends BaseNavigationController implements BackPres
                             delayHandler.postDelayed(() -> multiSheetEventRelay.sendEvent(new MultiSheetEventRelay.MultiSheetEvent(MultiSheetEventRelay.MultiSheetEvent.Action.HIDE, MultiSheetView.Sheet.FIRST)), 100);
                             delayHandler.postDelayed(() -> pushViewController(SettingsParentFragment.newInstance(R.xml.settings_headers, R.string.settings), "Settings Fragment"), 250);
                             break;
-                        case NavigationEventRelay.NavigationEvent.Type.SUPPORT_SELECTED:
+                        case NavigationEventRelay.NavigationEvent.Type.ABOUT_SELECTED:
                             delayHandler.postDelayed(() -> multiSheetEventRelay.sendEvent(new MultiSheetEventRelay.MultiSheetEvent(MultiSheetEventRelay.MultiSheetEvent.Action.HIDE, MultiSheetView.Sheet.FIRST)), 100);
-                            delayHandler.postDelayed(() -> pushViewController(SettingsParentFragment.newInstance(R.xml.settings_about, R.string.pref_title_about), "Support Fragment"), 250);
+                            delayHandler.postDelayed(() -> pushViewController(SettingsParentFragment.newInstance(R.xml.settings_about, R.string.pref_title_about), "About Fragment"), 250);
                             break;
                         case NavigationEventRelay.NavigationEvent.Type.PLAYLIST_SELECTED:
                             delayHandler.postDelayed(() -> pushViewController(PlaylistDetailFragment.newInstance((Playlist) navigationEvent.data), "PlaylistDetailFragment"), 250);

@@ -16,7 +16,7 @@ public class NavigationEventRelay {
     static NavigationEvent sleepTimerSelectedEvent = new NavigationEvent(NavigationEvent.Type.SLEEP_TIMER_SELECTED);
     static NavigationEvent equalizerSelectedEvent = new NavigationEvent(NavigationEvent.Type.EQUALIZER_SELECTED);
     static NavigationEvent settingsSelectedEvent = new NavigationEvent(NavigationEvent.Type.SETTINGS_SELECTED);
-    static NavigationEvent supportSelectedEvent = new NavigationEvent(NavigationEvent.Type.SUPPORT_SELECTED);
+    static NavigationEvent aboutSelectedEvent = new NavigationEvent(NavigationEvent.Type.ABOUT_SELECTED);
     static NavigationEvent foldersSelectedEvent = new NavigationEvent(NavigationEvent.Type.FOLDERS_SELECTED) {
         @Override
         public boolean isActionable() {
@@ -48,7 +48,7 @@ public class NavigationEventRelay {
             int SLEEP_TIMER_SELECTED = 2;
             int EQUALIZER_SELECTED = 3;
             int SETTINGS_SELECTED = 4;
-            int SUPPORT_SELECTED = 5;
+            int ABOUT_SELECTED = 5;
             int PLAYLIST_SELECTED = 6;
             int GO_TO_ARTIST = 7;
             int GO_TO_ALBUM = 8;

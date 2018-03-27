@@ -37,7 +37,7 @@ public class DrawerParent implements Parent<DrawerChild> {
     static DrawerParent sleepTimerParent = new DrawerParent(Type.SLEEP_TIMER, R.string.sleep_timer, R.drawable.ic_sleep_24dp, NavigationEventRelay.sleepTimerSelectedEvent, false);
     static DrawerParent equalizerParent = new DrawerParent(Type.EQUALIZER, R.string.equalizer, R.drawable.ic_equalizer_24dp, NavigationEventRelay.equalizerSelectedEvent, false);
     static DrawerParent settingsParent = new DrawerParent(DrawerParent.Type.SETTINGS, R.string.settings, R.drawable.ic_settings_24dp, NavigationEventRelay.settingsSelectedEvent, false);
-    static DrawerParent supportParent = new DrawerParent(DrawerParent.Type.SUPPORT, R.string.pref_title_about, R.drawable.ic_help_24dp, NavigationEventRelay.supportSelectedEvent, false);
+    static DrawerParent aboutParent = new DrawerParent(DrawerParent.Type.ABOUT, R.string.pref_title_about, R.drawable.ic_help_24dp, NavigationEventRelay.aboutSelectedEvent, false);
     static DrawerParent folderParent = new DrawerParent(DrawerParent.Type.FOLDERS, R.string.folders_title, R.drawable.ic_folder_multiple_24dp, NavigationEventRelay.foldersSelectedEvent, true) {
         @Override
         public boolean isSelectable() {
@@ -52,7 +52,7 @@ public class DrawerParent implements Parent<DrawerChild> {
         int SLEEP_TIMER = 3;
         int EQUALIZER = 4;
         int SETTINGS = 5;
-        int SUPPORT = 6;
+        int ABOUT = 6;
     }
 
     private boolean selectable = true;

@@ -128,7 +128,7 @@ public class DrawerFragment extends BaseFragment implements
         drawerParents.add(DrawerParent.sleepTimerParent);
         drawerParents.add(DrawerParent.equalizerParent);
         drawerParents.add(DrawerParent.settingsParent);
-        drawerParents.add(DrawerParent.supportParent);
+        drawerParents.add(DrawerParent.aboutParent);
 
         adapter = new DrawerAdapter(drawerParents);
     }
